@@ -1,4 +1,4 @@
-import { CardWidget } from "./cards";
+import { CardProduct, CardWidget } from "./cards";
 import Table from "./table";
 
-export { CardWidget, Table }
+export { CardWidget, Table, CardProduct }

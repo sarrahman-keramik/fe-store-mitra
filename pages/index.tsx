@@ -1,10 +1,19 @@
-import { Iconify } from "../src/components/atoms";
+import { CardProduct } from "../src/components/molecules";
+import { AppBar } from "../src/layout";
 
 export default function Home() {
   return (
     <div>
-      <div className="w-full bg-teal-800 text-white p-3">
-        <Iconify icon="heroicons:shopping-cart-20-solid" />
+      <AppBar />
+      <div className="py-3 flex flex-wrap w-full last:justify-center">
+        <CardProduct />
+        <CardProduct />
+        <CardProduct />
+        <CardProduct />
+        <CardProduct />
+        <CardProduct />
+        <CardProduct />
+        <CardProduct />
       </div>
     </div>
   );
