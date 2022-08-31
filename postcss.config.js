@@ -9,7 +9,7 @@ module.exports = {
           {
             content: [
               "./pages/**/*.{ts,tsx}",
-              "./components/**/*.{ts,tsx}",
+              ".src/components/**/*.{ts,tsx}",
             ],
             defaultExtractor: (content) =>
               content.match(/[\w-/:]+(?<!:)/g) || [],
