@@ -18,5 +18,5 @@ module.exports = {
       "2xl": "1536px",
     },
   },
-  plugins: ["postcss-import", "tailwindcss", "autoprefixer"],
+  plugins: [],
 };
