@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./pages/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {},
     fontFamily: {
@@ -21,5 +18,5 @@ module.exports = {
       "2xl": "1536px",
     },
   },
-  plugins: [],
-}
+  plugins: ["postcss-import", "tailwindcss", "autoprefixer"],
+};
