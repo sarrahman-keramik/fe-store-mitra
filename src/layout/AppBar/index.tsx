@@ -5,7 +5,7 @@ export default function AppBar() {
     <div className="w-full bg-teal-800 p-5 flex justify-between items-center px-10">
       <Iconify icon="dashicons:menu-alt3" />
       <Typograhpy
-        child="Toko Keramik"
+        child={`${process.env.NEXT_PUBLIC_NAMEAPP}`}
         variant="2xl"
         other={"font-extrabold text-white"}
       />
