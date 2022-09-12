@@ -10,6 +10,18 @@ export default function DetailBarang() {
       main={
         <div>
           <ProductDetailCard />
+          <div className="md:flex-row flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
+            simulasi keramik
+          </div>
+          <div className="md:flex-row flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
+            kalkulator keramik + simulasi biaya
+          </div>
+          <div className="md:flex-row flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
+            cek ongkir
+          </div>
+          <div className="md:flex-row flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
+            rekomendasi produk serupa
+          </div>
         </div>
       }
     />
