@@ -14,7 +14,7 @@ export default function CardProduct(props: { onClick: () => void }) {
       />
       <div className="px-5 pb-5">
         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-          Nama Keramik baru- 40 x 40
+          Nama Keramik baru
         </h5>
         <p className="text-teal-800 font-semibold">Categorinya</p>
         <div className="flex justify-between items-center mt-5">

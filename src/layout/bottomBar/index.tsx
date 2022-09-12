@@ -4,7 +4,7 @@ import { IconButton } from "../../components/atoms";
 export default function BottomBar() {
   const router = useRouter();
   return (
-    <div className="fixed w-full sm:hidden bg-teal-800 bottom-0 text-white">
+    <div className="fixed w-full z-20 sm:hidden bg-teal-800 bottom-0 text-white">
       <div className="flex justify-between">
         <div
           className={`text-center cursor-pointer ${
