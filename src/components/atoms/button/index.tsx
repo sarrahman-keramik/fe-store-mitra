@@ -42,7 +42,7 @@ function Button(props: {
         ${bgColor === "orange" ? "bg-orange-500 hover:bg-orange-600" : ""}
         ${bgColor === "transparent" ? "bg-transparent" : ""}
         ${color === "black" ? "text-black" : "text-white"}
-        py-2 px-4 rounded transition
+        py-2 px-4 rounded-lg md:rounded-2xl transition
         ${props.other}`}
     >
       <div
