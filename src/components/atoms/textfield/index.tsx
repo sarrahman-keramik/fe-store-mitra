@@ -61,7 +61,7 @@ function Textfield(props: {
           };
         }}
         className={`
-        rounded p-2 w-full border border-gray-700 focus:border-gray-900 hover:border-gray-400 bg-white
+        rounded-lg md:rounded-2xl p-2 w-full border border-gray-700 focus:border-gray-900 hover:border-gray-400 bg-white
         ${props.disabled ? "cursor-not-allowed bg-red-200" : ""}
         ${props.costumErrMessage ? "bg-red-200 border-red-700" : ""}
         ${isNull ? "bg-red-200 border-red-700" : ""}

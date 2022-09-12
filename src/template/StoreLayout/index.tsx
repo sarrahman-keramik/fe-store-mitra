@@ -31,7 +31,7 @@ export default function StoreLayout(props: {
           />
         </div>
       </div>
-      <div className="p-1 w-full">{props.main}</div>
+      <div className="p-1 w-full mb-20">{props.main}</div>
       <BottomBar />
     </div>
   );

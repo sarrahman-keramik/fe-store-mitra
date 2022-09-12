@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+import { ProductDetailCard } from "../../../src/layout";
 import { StoreLayout } from "../../../src/template";
 
 export default function DetailBarang() {
@@ -7,7 +9,7 @@ export default function DetailBarang() {
       noSearchable={true}
       main={
         <div>
-          <div>aihdaoi</div>
+          <ProductDetailCard />
         </div>
       }
     />

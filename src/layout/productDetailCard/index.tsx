@@ -1,41 +1,31 @@
-import { IconButton } from "../../../atoms";
+import { Iconify } from "../../components/atoms";
 
 /* eslint-disable @next/next/no-img-element */
-export default function CardProduct(props: { onClick: () => void }) {
+export default function ProductDetailCard() {
   return (
-    <div
-      onClick={props.onClick}
-      className="w-full cursor-pointer max-w-sm md:w-72 hover:shadow-lg bg-white rounded-xl md:rounded-3xl shadow m-2"
-    >
-      <img
-        className="p-3 rounded-t-md object-contain"
-        src={image2}
-        alt="product image"
-      />
-      <div className="px-5 pb-5">
-        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-          Nama Keramik baru- 40 x 40
-        </h5>
-        <p className="text-teal-800 font-semibold">Categorinya</p>
-        <div className="flex justify-between items-center mt-5">
-          <span className="text-xl font-semibold text-gray-900 dark:text-white">
-            Rp 49k
-          </span>
-          <div className="flex items-center">
-            <IconButton
-              //di sini tombol berbagi
-              icon="fa:search"
-              backgroundColor="transparent"
-              color="teal"
-            />
-            <IconButton
-              // di sini nanti tombol menyukai
-              icon="fa:search"
-              backgroundColor="transparent"
-              color="teal"
-            />
-          </div>
-        </div>
+    <div className="md:flex-row flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
+      <div className="w-full md:w-1/3">
+        <img src={image2} alt="gambar" />
+      </div>
+      <div className="md:w-2/3 w-full p-3 md:px-12 flex-col flex justify-center">
+        <h1 className="font-semibold text-xl md:text-4xl capitalize">
+          Keramik Paling baru - 40 x 40
+        </h1>
+        <ul className="mt-4 md:text-xl md:mt-8">
+          <li className="flex items-center mb-3 md:mb-6">
+            <Iconify icon="fa:search" color="teal" other={"mr-2"} />{" "}
+            <span className="font-medium">Merk : </span> Milan
+          </li>
+          <li className="flex items-center mb-3 md:mb-6">
+            <Iconify icon="fa:search" color="teal" other={"mr-2"} />{" "}
+            <span className="font-medium">Ukuran :</span> 40 X 40
+          </li>
+          <li className="flex items-center mb-3 md:mb-6">
+            <Iconify icon="fa:search" color="teal" other={"mr-2"} />
+            <span className="font-medium">tipe :</span> Glossy
+          </li>
+        </ul>
+        <h1 className="font-semibold text-2xl md:text-4xl mt-3">Rp 80.000</h1>
       </div>
     </div>
   );
