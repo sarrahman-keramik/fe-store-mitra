@@ -6,7 +6,7 @@ export default function AppBar() {
       <Typograhpy
         child={`${process.env.NEXT_PUBLIC_NAMEAPP}`}
         variant="xl"
-        other={"font-extrabold text-white"}
+        other={"font-extrabold text-white capitalize"}
       />
       <div className="sm:flex hidden items-center">
         <Iconify other={"mr-10"} size="2xl" icon="fa:search" />
