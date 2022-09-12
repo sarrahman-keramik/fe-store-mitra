@@ -1,9 +1,12 @@
 import { IconButton } from "../../../atoms";
 
 /* eslint-disable @next/next/no-img-element */
-export default function CardProduct() {
+export default function CardProduct(props: { onClick: () => void }) {
   return (
-    <div className="w-full cursor-pointer max-w-sm md:w-72 hover:shadow-md bg-white rounded-md shadow m-2">
+    <div
+      onClick={props.onClick}
+      className="w-full cursor-pointer max-w-sm md:w-72 hover:shadow-lg bg-white rounded-md shadow m-2"
+    >
       <img
         className="p-3 rounded-t-md object-contain"
         src={image2}
