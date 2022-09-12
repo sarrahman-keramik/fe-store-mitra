@@ -23,14 +23,7 @@ export default function CardProduct(props: { onClick: () => void }) {
           </span>
           <div className="flex items-center">
             <IconButton
-              //di sini tombol berbagi
-              icon="fa:search"
-              backgroundColor="transparent"
-              color="teal"
-            />
-            <IconButton
-              // di sini nanti tombol menyukai
-              icon="fa:search"
+              icon="ci:share"
               backgroundColor="transparent"
               color="teal"
             />

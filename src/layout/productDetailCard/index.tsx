@@ -1,4 +1,4 @@
-import { Iconify } from "../../components/atoms";
+import { Button, IconButton, Iconify } from "../../components/atoms";
 
 /* eslint-disable @next/next/no-img-element */
 export default function ProductDetailCard() {
@@ -13,19 +13,46 @@ export default function ProductDetailCard() {
         </h1>
         <ul className="mt-4 md:text-xl md:mt-8">
           <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fa:search" color="teal" other={"mr-2"} />{" "}
+            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />{" "}
             <span className="font-medium">Merk : </span> Milan
           </li>
           <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fa:search" color="teal" other={"mr-2"} />{" "}
+            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />{" "}
             <span className="font-medium">Ukuran :</span> 40 X 40
           </li>
           <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fa:search" color="teal" other={"mr-2"} />
+            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />
             <span className="font-medium">tipe :</span> Glossy
           </li>
         </ul>
-        <h1 className="font-semibold text-2xl md:text-4xl mt-3">Rp 80.000</h1>
+        <div>
+          <h1 className="font-semibold text-2xl md:text-4xl mt-2 mb-5">
+            Rp 80.000
+          </h1>
+          <div className="flex justify-between items-center">
+            <div className="flex items-center">
+              <IconButton
+                other={"mr-3"}
+                backgroundColor="green"
+                icon="akar-icons:whatsapp-fill"
+              />
+              <IconButton
+                other={"mr-3"}
+                backgroundColor="orange"
+                icon="bxs:cart-add"
+              />
+              <Button other={"mr-3"} child="Beli" />
+            </div>
+            <div>
+              <IconButton
+                otherIcon={'text-2xl md:text-3xl'}
+                icon="ci:heart-outline" // ci:heart-fill
+                backgroundColor="transparent"
+                color="teal"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

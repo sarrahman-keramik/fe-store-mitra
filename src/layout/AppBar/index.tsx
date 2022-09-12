@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Iconify, Typograhpy } from "../../components/atoms";
+import { IconButton, Typograhpy } from "../../components/atoms";
 
 export default function AppBar() {
   const router = useRouter();
@@ -13,9 +13,24 @@ export default function AppBar() {
         />
       </div>
       <div className="sm:flex hidden items-center">
-        <Iconify other={"mr-10"} size="2xl" icon="fa:search" />
-        <Iconify other={"mr-10"} size="2xl" icon="fa:search" />
-        <Iconify size="2xl" icon="fa:search" />
+        <IconButton
+          other={"mr-2"}
+          backgroundColor="transparent"
+          icon="ci:heart-fill"
+          onClick={() => router.push("/tersimpan")}
+        />
+        <IconButton
+          other={"mr-2"}
+          backgroundColor="transparent"
+          icon="bxs:cart"
+          onClick={() => router.push("/keranjang")}
+        />
+        <IconButton
+          other={"mr-2"}
+          backgroundColor="transparent"
+          icon="ci:notification"
+          onClick={() => router.push("/notifikasi")}
+        />
       </div>
     </div>
   );
