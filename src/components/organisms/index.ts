@@ -1,3 +1,4 @@
+import SwiperProduct from "./swiperProduct";
 import TextfieldGroup from "./textfield-group";
 
-export { TextfieldGroup }
+export { TextfieldGroup, SwiperProduct }
