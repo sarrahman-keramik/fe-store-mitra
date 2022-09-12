@@ -1,3 +1,4 @@
 import AppBar from "./AppBar";
+import BottomBar from "./bottomBar";
 
-export { AppBar }
+export { AppBar, BottomBar }
