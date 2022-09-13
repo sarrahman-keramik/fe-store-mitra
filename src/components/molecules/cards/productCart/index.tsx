@@ -1,58 +1,28 @@
-import { Button, IconButton, Iconify } from "../../components/atoms";
+import { Iconify } from "../../../atoms";
 
 /* eslint-disable @next/next/no-img-element */
-export default function ProductDetailCard() {
+export default function ProductCart() {
   return (
-    <div className="md:flex-row flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
-      <div className="w-full md:w-1/3">
-        <img src={image2} alt="gambar" />
+    <div className="bg-white rounded-lg md:rounded-2xl shadow-lg w-full md:w-[48%] m-2 flex">
+      <div className="w-1/3">
+        <img
+          className="p-1 border rounded-t-md object-contain"
+          src={image2}
+          alt="product image"
+        />{" "}
       </div>
-      <div className="md:w-2/3 w-full p-3 md:px-12 flex-col flex justify-center">
-        <h1 className="font-semibold text-xl md:text-4xl capitalize">
+      <div className="md:w-2/3 w-full p-3 md:px-10 flex-col flex justify-center">
+        <h1 className="font-semibold pb-2 md:text-2xl capitalize">
           Keramik Paling baru
         </h1>
-        <ul className="mt-4 md:text-xl md:mt-8">
-          <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />{" "}
-            <span className="font-medium">Merk : </span> Milan
-          </li>
-          <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />{" "}
-            <span className="font-medium">Ukuran :</span> 40 X 40
-          </li>
-          <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />
-            <span className="font-medium">tipe :</span> Glossy
-          </li>
-        </ul>
-        <div>
-          <h1 className="font-semibold text-2xl md:text-4xl mt-2 mb-5">
-            Rp 80.000
-          </h1>
-          <div className="flex justify-between items-center">
-            <div className="flex items-center">
-              <IconButton
-                other={"mr-3"}
-                backgroundColor="green"
-                icon="akar-icons:whatsapp-fill"
-              />
-              <IconButton
-                other={"mr-3"}
-                backgroundColor="orange"
-                icon="bxs:cart-add"
-                onClick={() => {}}
-              />
-              <Button other={"mr-3"} child="Beli" />
-            </div>
-            <div>
-              <IconButton
-                otherIcon={'text-2xl md:text-3xl'}
-                icon="ci:heart-outline" // ci:heart-fill
-                backgroundColor="transparent"
-                color="teal"
-              />
-            </div>
-          </div>
+        <div className="flex items-center">
+          <Iconify icon="fluent:select-all-on-20-filled" color="teal" />
+          <input
+            defaultValue={0}
+            className="border w-10 mx-1 text-center"
+            type="number"
+          />
+          <Iconify icon="fluent:select-all-on-20-filled" color="teal" />
         </div>
       </div>
     </div>

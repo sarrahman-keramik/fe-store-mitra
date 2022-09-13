@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { CardProduct } from "../src/components/molecules";
 import { StoreLayout } from "../src/template";
 
-export default function Home() {
+function Home() {
   const router = useRouter();
   return (
     <StoreLayout
@@ -28,3 +28,5 @@ export default function Home() {
     />
   );
 }
+
+export default Home;

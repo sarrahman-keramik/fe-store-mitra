@@ -6,9 +6,9 @@ export default function KalkulatorKeramik() {
       <div className="p-3">
         <h2 className="font-semibold text-lg capitalize">kalkulator keramik</h2>
         <div className="mt-3">
-          <Textfield label="Panjang" type="number" />
-          <Textfield label="Panjang" type="number" />
-          <Textfield label="Panjang" type="number" />
+          <Textfield other="mb-2" label="Panjang" type="number" />
+          <Textfield other="mb-2" label="Lebar" type="number" />
+          <Textfield other="mb-2" label="Tinggi" type="number" />
           <Button other={"w-full mt-2"} child="Hitung" />
         </div>
         <div className="mt-5 md:mt-16 flex flex-col md:flex-row">

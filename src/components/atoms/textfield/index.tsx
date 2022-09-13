@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import styles from "./style.module.css";
 
 function Textfield(props: {
   type?: string;
@@ -65,7 +64,7 @@ function Textfield(props: {
         ${props.disabled ? "cursor-not-allowed bg-red-200" : ""}
         ${props.costumErrMessage ? "bg-red-200 border-red-700" : ""}
         ${isNull ? "bg-red-200 border-red-700" : ""}
-        ${props.otherInput} ${styles.input}
+        ${props.otherInput}
         `}
       />
       <div className={`${isNull ? "block" : "hidden"}`}>
