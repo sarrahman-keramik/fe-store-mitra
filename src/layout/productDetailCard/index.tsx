@@ -13,15 +13,27 @@ export default function ProductDetailCard() {
         </h1>
         <ul className="mt-4 md:text-xl md:mt-8">
           <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />{" "}
+            <Iconify
+              icon="fluent:select-all-on-20-filled"
+              color="teal"
+              other={"mr-2"}
+            />{" "}
             <span className="font-medium">Merk : </span> Milan
           </li>
           <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />{" "}
+            <Iconify
+              icon="fluent:select-all-on-20-filled"
+              color="teal"
+              other={"mr-2"}
+            />{" "}
             <span className="font-medium">Ukuran :</span> 40 X 40
           </li>
           <li className="flex items-center mb-3 md:mb-6">
-            <Iconify icon="fluent:select-all-on-20-filled" color="teal" other={"mr-2"} />
+            <Iconify
+              icon="fluent:select-all-on-20-filled"
+              color="teal"
+              other={"mr-2"}
+            />
             <span className="font-medium">tipe :</span> Glossy
           </li>
         </ul>
@@ -36,17 +48,18 @@ export default function ProductDetailCard() {
                 backgroundColor="green"
                 icon="akar-icons:whatsapp-fill"
               />
-              <IconButton
+              <Button
                 other={"mr-3"}
                 backgroundColor="orange"
                 icon="bxs:cart-add"
+                child="Tambah"
                 onClick={() => {}}
               />
-              <Button other={"mr-3"} child="Beli" />
+              {/* <Button other={"mr-3"} child="Beli" /> */}
             </div>
             <div>
               <IconButton
-                otherIcon={'text-2xl md:text-3xl'}
+                otherIcon={"text-2xl md:text-3xl"}
                 icon="ci:heart-outline" // ci:heart-fill
                 backgroundColor="transparent"
                 color="teal"

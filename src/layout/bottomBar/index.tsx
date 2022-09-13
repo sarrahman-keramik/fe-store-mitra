@@ -16,7 +16,7 @@ export default function BottomBar() {
             icon="ant-design:home-filled"
             onClick={() => router.push("/")}
           />
-          <p className="text-sm">Home</p>
+          {/* <p className="text-sm">Home</p> */}
         </div>
         <div
           className={`text-center cursor-pointer ${
@@ -28,7 +28,7 @@ export default function BottomBar() {
             icon="ci:heart-fill"
             onClick={() => router.push("/tersimpan")}
           />
-          <p className="text-sm">Tersimpan</p>
+          {/* <p className="text-sm">Tersimpan</p> */}
         </div>
         <div
           className={`text-center cursor-pointer ${
@@ -40,7 +40,7 @@ export default function BottomBar() {
             icon="bxs:cart"
             onClick={() => router.push("/keranjang")}
           />
-          <p className="text-sm">Keranjang</p>
+          {/* <p className="text-sm">Keranjang</p> */}
         </div>
         <div
           className={`${
@@ -52,7 +52,7 @@ export default function BottomBar() {
             icon="ci:notification"
             onClick={() => router.push("/notifikasi")}
           />
-          <p className="text-sm">Notifikasi</p>
+          {/* <p className="text-sm">Notifikasi</p> */}
         </div>
       </div>
     </div>

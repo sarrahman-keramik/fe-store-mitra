@@ -6,16 +6,16 @@ export default function ProductCart() {
     <div className="bg-white rounded-lg md:rounded-2xl shadow-lg w-full md:w-[48%] m-2 flex">
       <div className="w-1/3">
         <img
-          className="p-1 border rounded-t-md object-contain"
+          className="p-1 rounded-tl-md object-contain"
           src={image2}
           alt="product image"
         />{" "}
       </div>
-      <div className="md:w-2/3 w-full p-3 md:px-10 flex-col flex justify-center">
-        <h1 className="font-semibold pb-2 md:text-2xl capitalize">
+      <div className="md:w-2/3 p-3 md:px-10 flex-col flex justify-center">
+        <h1 className="font-semibold md:text-2xl capitalize">
           Keramik Paling baru
         </h1>
-        <div className="flex items-center">
+        <div className="flex items-center py-3">
           <Iconify icon="fluent:select-all-on-20-filled" color="teal" />
           <input
             defaultValue={0}
@@ -23,6 +23,11 @@ export default function ProductCart() {
             type="number"
           />
           <Iconify icon="fluent:select-all-on-20-filled" color="teal" />
+        </div>
+        <div>
+          <h1 className="font-semibold md:text-2xl capitalize">
+            Rp 1.200.000
+          </h1>
         </div>
       </div>
     </div>
