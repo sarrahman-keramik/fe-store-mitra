@@ -1,4 +1,4 @@
-import { Iconify } from "../../../atoms";
+import { IconButton, Iconify } from "../../../atoms";
 
 /* eslint-disable @next/next/no-img-element */
 export default function ProductCart() {
@@ -12,11 +12,14 @@ export default function ProductCart() {
         />{" "}
       </div>
       <div className="md:w-2/3 p-3 md:px-10 flex-col flex justify-center">
-        <h1 className="font-semibold md:text-2xl capitalize">
-          Keramik Paling baru
-        </h1>
+        <div className="flex items-center justify-between">
+          <h1 className="font-semibold md:text-2xl capitalize">
+            Keramik Paling baru 
+          </h1>
+          <IconButton icon="fluent:select-all-on-20-filled" backgroundColor="transparent" color="red" />
+        </div>
         <div className="flex items-center py-3">
-          <Iconify icon="fluent:select-all-on-20-filled" color="teal" />
+          <Iconify icon="fluent:select-all-on-20-filled" color="orange" />
           <input
             defaultValue={0}
             className="border w-10 mx-1 text-center"
@@ -25,9 +28,7 @@ export default function ProductCart() {
           <Iconify icon="fluent:select-all-on-20-filled" color="teal" />
         </div>
         <div>
-          <h1 className="font-semibold md:text-2xl capitalize">
-            Rp 1.200.000
-          </h1>
+          <h1 className="font-semibold md:text-2xl capitalize">Rp 1.200.000</h1>
         </div>
       </div>
     </div>
