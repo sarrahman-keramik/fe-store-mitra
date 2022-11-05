@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { CardProduct } from "../src/components/molecules";
+import { Banner, MenuIcon } from "../src/layout";
 import { StoreLayout } from "../src/template";
 
 function Home() {
@@ -8,21 +9,25 @@ function Home() {
     <StoreLayout
       title={`Online Store - ${process.env.NEXT_PUBLIC_NAMEAPP}`}
       main={
-        <div className="py-3 flex flex-wrap w-full justify-evenly">
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
-          <CardProduct onClick={() => router.push("/barang/kad")} />
+        <div>
+          <Banner />
+          <MenuIcon />
+          <div className="py-3 flex flex-wrap w-full justify-evenly">
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+            <CardProduct onClick={() => router.push("/barang/kad")} />
+          </div>
         </div>
       }
     />
