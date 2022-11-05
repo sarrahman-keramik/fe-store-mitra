@@ -14,7 +14,7 @@ export default function StoreLayout(props: {
         <title>{props.title}</title>
       </Head>
       <AppBar />
-      <div className="p-2 md:p-4 w-full mb-20">{props.main}</div>
+      <div className="p-1 md:p-8 w-full mb-20">{props.main}</div>
       <div className={`${router.pathname === "/keranjang" ? "hidden" : ""}`}>
         <BottomBar />
       </div>

@@ -1,6 +1,7 @@
+import { SectionLayout } from "../../template";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import { CardProduct } from "../../molecules";
+import { CardProduct } from "../../components/molecules";
 
 const products = [
   {
@@ -75,31 +76,31 @@ const products = [
   },
 ];
 
-export default function SwiperProduct() {
+export default function Promo() {
   return (
-    <div className="flex m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
-      <h2 className="font-semibold text-lg capitalize p-3">
-        Rekomendasi Untukmu
-      </h2>
-      <div className="cursor-grab select-none">
-        <Swiper
-          slidesPerView={2}
-          breakpoints={{
-            300: { slidesPerView: 1.2 },
-            640: { slidesPerView: 2.2 },
-            768: { slidesPerView: 3.2 },
-            1024: { slidesPerView: 4.2 },
-          }}
-          spaceBetween={20}
-          modules={[Pagination]}
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.name}>
-              <CardProduct onClick={() => {}} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
+    <SectionLayout
+      title="Promo"
+      main={
+        <div>
+          <Swiper
+            slidesPerView={2}
+            breakpoints={{
+              300: { slidesPerView: 1.1 },
+              640: { slidesPerView: 2.1 },
+              768: { slidesPerView: 3.1 },
+              1024: { slidesPerView: 4.1 },
+            }}
+            spaceBetween={20}
+            modules={[Pagination]}
+          >
+            {products.map((product) => (
+              <SwiperSlide key={product.name}>
+                <CardProduct onClick={() => {}} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      }
+    />
   );
 }

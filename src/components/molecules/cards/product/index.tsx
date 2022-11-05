@@ -5,19 +5,19 @@ export default function CardProduct(props: { onClick: () => void }) {
   return (
     <div
       onClick={props.onClick}
-      className="w-full cursor-pointer max-w-sm md:w-72 hover:shadow-lg bg-white rounded-xl md:rounded-3xl shadow m-2"
+      className="w-full cursor-pointer max-w-sm md:w-64 hover:shadow-lg bg-white rounded-md md:rounded-lg shadow m-2"
     >
       <img
-        className="p-3 rounded-t-md object-contain"
+        className="rounded-t-md object-contain"
         src={image2}
         alt="product image"
       />
-      <div className="px-5 pb-5">
+      <div className="px-3 pb-3">
         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
           Nama Keramik baru
         </h5>
         <p className="text-teal-800 font-semibold">Categorinya</p>
-        <div className="flex justify-between items-center mt-5">
+        <div className="flex justify-between items-center mt-3">
           <span className="text-xl font-semibold text-gray-900 dark:text-white">
             Rp 49k
           </span>

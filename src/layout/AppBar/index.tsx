@@ -14,7 +14,7 @@ export default function AppBar() {
             other={"font-extrabold text-white capitalize"}
           />
         </div>
-        <div className="w-full md:mx-4 flex my-4">
+        <div className="w-full sm:mx-4 md:mx-12 flex my-4">
           <Textfield
             other="w-full mr-2 border-none shadow-gray-100 shadow"
             placeholder="Cari Sesuatu ..."
