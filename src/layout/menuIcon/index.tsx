@@ -24,8 +24,8 @@ export default function MenuIcon() {
 
 function Menu(props: { title: string; image: any }) {
   return (
-    <div className="w-full flex justify-center p-4">
-      <div className="text-center">
+    <div className="w-full flex justify-center p-2">
+      <div className="text-center cursor-pointer hover:shadow p-2 rounded">
         <Image src={props.image} alt="pipe" width={75} height={75} />
         <h3 className="text-center font-bold text-teal-800">{props.title}</h3>
       </div>

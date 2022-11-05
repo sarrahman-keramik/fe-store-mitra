@@ -12,7 +12,8 @@ function Home() {
         <div>
           <Banner />
           <MenuIcon />
-          <div className="py-3 flex flex-wrap w-full justify-evenly">
+          <div className="border bg-white p-4 mt-4">Rekomendasi</div>
+          <div className="bg-white py-3 flex flex-wrap w-full justify-evenly">
             <CardProduct onClick={() => router.push("/barang/kad")} />
             <CardProduct onClick={() => router.push("/barang/kad")} />
             <CardProduct onClick={() => router.push("/barang/kad")} />
