@@ -26,7 +26,7 @@ export default function AppBar() {
             icon="fa:search"
           />
         </div>
-        <div className="sm:flex hidden items-center">
+        {/* <div className="sm:flex hidden items-center">
           <IconButton
             other={"mr-2"}
             backgroundColor="transparent"
@@ -45,6 +45,11 @@ export default function AppBar() {
             icon="ci:notification"
             onClick={() => router.push("/notifikasi")}
           />
+        </div> */}
+        <div className="sm:flex px-4 font-semibold text-white hidden items-center">
+          <p className="mr-2 cursor-pointer rounded p-1 hover:border">Masuk</p>
+          <p>|</p>
+          <p className="ml-2 cursor-pointer rounded p-1 hover:bg-white hover:text-teal-800">Daftar</p>
         </div>
       </div>
     </div>

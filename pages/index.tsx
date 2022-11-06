@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { CardProduct } from "../src/components/molecules";
-import { Banner, MenuIcon, Promo } from "../src/layout";
+import { Banner, MenuIcon, Promo, Footer } from "../src/layout";
 import { SectionLayout, StoreLayout } from "../src/template";
 
 function Home() {
@@ -34,6 +34,7 @@ function Home() {
               </div>
             }
           />
+         <Footer />
         </div>
       }
     />

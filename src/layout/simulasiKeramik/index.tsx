@@ -1,19 +1,22 @@
+import { SectionLayout } from "../../template";
+
 /* eslint-disable @next/next/no-img-element */
 export default function SimulasiKeramik() {
   return (
-    <div className="flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl flex-1">
-      <div className="p-3">
-        <h2 className="font-semibold text-lg capitalize">Simulasi Pattern</h2>
-      </div>
-      <div className="grid grid-cols-3 gap-0 px-2 pb-2 md:px-5 md:pb-5">
-        <img src={image2} alt="produk" className="w-full border" />
-        <img src={image2} alt="produk" className="w-full border" />
-        <img src={image2} alt="produk" className="w-full border" />
-        <img src={image2} alt="produk" className="w-full border" />
-        <img src={image2} alt="produk" className="w-full border" />
-        <img src={image2} alt="produk" className="w-full border" />
-      </div>
-    </div>
+    <SectionLayout
+      other="flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl flex-1"
+      title="Simulasi Pattern"
+      main={
+        <div className="grid grid-cols-3 gap-0 px-2 pb-2 md:px-5 md:pb-5">
+          <img src={image2} alt="produk" className="w-full border" />
+          <img src={image2} alt="produk" className="w-full border" />
+          <img src={image2} alt="produk" className="w-full border" />
+          <img src={image2} alt="produk" className="w-full border" />
+          <img src={image2} alt="produk" className="w-full border" />
+          <img src={image2} alt="produk" className="w-full border" />
+        </div>
+      }
+    />
   );
 }
 
