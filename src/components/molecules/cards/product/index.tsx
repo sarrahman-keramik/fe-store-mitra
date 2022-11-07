@@ -5,29 +5,32 @@ export default function CardProduct(props: { onClick: () => void }) {
   return (
     <div
       onClick={props.onClick}
-      className="w-full cursor-pointer max-w-sm md:w-64 hover:shadow-lg bg-white rounded-md md:rounded-lg shadow m-2"
+      className="w-fit cursor-pointer max-w-sm hover:shadow-md bg-white rounded md:rounded-md shadow m-2"
     >
       <img
         className="rounded-t-md object-contain"
-        src={image2}
+        src={`https://placeimg.com/640/480/nature`}
         alt="product image"
+        width={150}
+        height={150}
+        style={{ objectFit: "contain" }}
       />
       <div className="px-3 pb-3">
-        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="text-base font-semibold tracking-tight text-gray-900 dark:text-white">
           Nama Keramik baru
         </h5>
-        <p className="text-teal-800 font-semibold">Categorinya</p>
+        <p className="text-teal-800 text-sm font-semibold">Categorinya</p>
         <div className="flex justify-between items-center mt-3">
-          <span className="text-xl font-semibold text-gray-900 dark:text-white">
-            Rp 49k
+          <span className="text font-semibold text-gray-900 dark:text-white">
+            Rp 49.000.000
           </span>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <IconButton
               icon="ci:share"
               backgroundColor="transparent"
               color="teal"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

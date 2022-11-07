@@ -85,10 +85,10 @@ export default function Promo() {
           <Swiper
             slidesPerView={2}
             breakpoints={{
-              300: { slidesPerView: 1.1 },
-              640: { slidesPerView: 2.1 },
-              768: { slidesPerView: 3.1 },
-              1024: { slidesPerView: 4.1 },
+              250: { slidesPerView: 1.9 },
+              640: { slidesPerView: 3.1 },
+              768: { slidesPerView: 4.1 },
+              1024: { slidesPerView: 6.3 },
             }}
             spaceBetween={20}
             modules={[Pagination]}

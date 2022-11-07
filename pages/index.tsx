@@ -16,7 +16,7 @@ function Home() {
           <SectionLayout
             title="Rekomendasi"
             main={
-              <div className="py-3 flex flex-wrap w-full justify-evenly">
+              <div className="py-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                 <CardProduct onClick={() => router.push("/barang/kad")} />
                 <CardProduct onClick={() => router.push("/barang/kad")} />
                 <CardProduct onClick={() => router.push("/barang/kad")} />

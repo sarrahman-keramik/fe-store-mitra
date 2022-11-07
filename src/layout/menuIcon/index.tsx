@@ -37,7 +37,7 @@ function Menu(props: { title: string; image: any }) {
       <div className="text-center cursor-pointer hover:shadow p-2 rounded">
         {/* It's a tailwindcss class. It's hiding the div on md screen and showing it on md screen.  */}
         <div className="hidden md:block">
-          <Image src={props.image} alt="pipe" width={100} height={100} />
+          <Image src={props.image} alt="pipe" width={75} height={75} />
         </div>
         <div className="md:hidden">
           <Image src={props.image} alt="pipe" width={50} height={50} />
