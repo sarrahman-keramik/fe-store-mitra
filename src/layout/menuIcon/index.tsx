@@ -33,14 +33,14 @@ export default function MenuIcon() {
 
 function Menu(props: { title: string; image: any }) {
   return (
-    <div className="w-full flex justify-center p-2">
+    <div className="w-full select-none flex justify-center p-2">
       <div className="text-center cursor-pointer hover:shadow p-2 rounded">
         {/* It's a tailwindcss class. It's hiding the div on md screen and showing it on md screen.  */}
         <div className="hidden md:block">
-          <Image src={props.image} alt="pipe" width={75} height={75} />
+          <Image src={props.image} alt={props.title} width={75} height={75} />
         </div>
         <div className="md:hidden">
-          <Image src={props.image} alt="pipe" width={50} height={50} />
+          <Image src={props.image} alt={props.title} width={50} height={50} />
         </div>
         <h3 className="text-center text-xs md:text-base font-bold text-teal-800">
           {props.title}

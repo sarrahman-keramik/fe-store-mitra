@@ -5,16 +5,18 @@ export default function CardProduct(props: { onClick: () => void }) {
   return (
     <div
       onClick={props.onClick}
-      className="w-fit cursor-pointer max-w-sm hover:shadow-md bg-white rounded md:rounded-md shadow m-2"
+      className="w-fit cursor-pointer max-w-sm select-none hover:shadow-md bg-white rounded md:rounded-md shadow m-2"
     >
-      <img
-        className="rounded-t-md object-contain"
-        src={`https://placeimg.com/640/480/nature`}
-        alt="product image"
-        width={150}
-        height={150}
-        style={{ objectFit: "contain" }}
-      />
+      <div className="flex justify-center">
+        <img
+          className="rounded-t-md object-contain"
+          src={`https://placeimg.com/640/480/nature`}
+          alt="product image"
+          width={200}
+          height={200}
+          style={{ objectFit: "contain" }}
+        />
+      </div>
       <div className="px-3 pb-3">
         <h5 className="text-base font-semibold tracking-tight text-gray-900 dark:text-white">
           Nama Keramik baru
@@ -24,13 +26,6 @@ export default function CardProduct(props: { onClick: () => void }) {
           <span className="text font-semibold text-gray-900 dark:text-white">
             Rp 49.000.000
           </span>
-          {/* <div className="flex items-center">
-            <IconButton
-              icon="ci:share"
-              backgroundColor="transparent"
-              color="teal"
-            />
-          </div> */}
         </div>
       </div>
     </div>
