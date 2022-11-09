@@ -45,8 +45,8 @@ export default function AppBar(props: {
           <IconButton
             other={"mr-2"}
             backgroundColor="transparent"
-            icon="ci:heart-fill"
-            onClick={() => router.push("/tersimpan")}
+            icon="bi:chat-text-fill"
+            onClick={() => router.push("/chat")}
           />
           <IconButton
             other={"mr-2"}
