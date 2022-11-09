@@ -1,5 +1,17 @@
 import { api } from "../../../utils";
 
+export const RegisterApi = (data: any) => (dispatch: any) => {
+    return new Promise(async (resolve, reject) => {
+        api.post(`/auth/daftar`, data)
+            .then((response: any) => {
+                resolve(response);
+            })
+            .catch((error: any) => {
+                reject(error);
+            });
+    })
+}
+
 export const LoginApi = (data: { username: string; password: string }) => (dispatch: any) => {
     return new Promise(async (resolve, reject) => {
         api.post(`/auth/masuk`, data)

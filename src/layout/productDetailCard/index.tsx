@@ -4,8 +4,8 @@ import { Button, IconButton, Iconify } from "../../components/atoms";
 export default function ProductDetailCard() {
   return (
     <div className="md:flex-row flex shadow-lg bg-white m-2 mt-4 flex-col rounded-xl md:rounded-3xl">
-      <div className="w-full md:w-1/3">
-        <img src={image2} alt="gambar" />
+      <div className="w-full md:w-1/3 flex items-center rounded">
+        <img src={`https://placeimg.com/640/480/nature`} className="rounded-t-lg md:rounded-tr-none md:rounded-l-lg" alt="gambar" />
       </div>
       <div className="md:w-2/3 w-full p-3 md:px-12 flex-col flex justify-center">
         <h1 className="font-semibold text-xl md:text-4xl capitalize">

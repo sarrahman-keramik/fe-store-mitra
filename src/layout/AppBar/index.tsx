@@ -20,11 +20,7 @@ export default function AppBar() {
             placeholder="Cari Sesuatu ..."
             type="search"
           />
-          <IconButton
-            backgroundColor="teal"
-            color="white"
-            icon="fa:search"
-          />
+          <IconButton backgroundColor="teal" color="white" icon="fa:search" />
         </div>
         {/* <div className="sm:flex hidden items-center">
           <IconButton
@@ -47,9 +43,19 @@ export default function AppBar() {
           />
         </div> */}
         <div className="sm:flex px-4 font-semibold text-white hidden items-center">
-          <p className="mr-2 cursor-pointer rounded p-1 hover:border">Masuk</p>
+          <p
+            className="mr-2 cursor-pointer rounded p-1 hover:border"
+            onClick={() => router.push("/login")}
+          >
+            Masuk
+          </p>
           <p>|</p>
-          <p className="ml-2 cursor-pointer rounded p-1 hover:bg-white hover:text-teal-800">Daftar</p>
+          <p
+            onClick={() => router.push("/daftar")}
+            className="ml-2 cursor-pointer rounded p-1 hover:bg-white hover:text-teal-800"
+          >
+            Daftar
+          </p>
         </div>
       </div>
     </div>
