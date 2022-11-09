@@ -6,7 +6,6 @@ import { AppBar, BottomBar } from "../../layout";
 export default function StoreLayout(props: {
   main: any;
   title: string;
-  noSearchable?: boolean;
   onlySearchable?: boolean;
 }) {
   const router = useRouter();

@@ -35,7 +35,7 @@ export default function AppBar(props: {
             placeholder="Cari Sesuatu ..."
             type="search"
           />
-          <IconButton backgroundColor="teal" color="white" icon="fa:search" />
+          <IconButton size="sm" backgroundColor="teal" color="white" icon="fa:search" />
         </div>
         <div
           className={`${

@@ -13,7 +13,6 @@ export default function DetailBarang() {
   return (
     <StoreLayout
       title="Detail Barang"
-      noSearchable={true}
       onlySearchable={true}
       main={
         <div>

@@ -5,7 +5,7 @@ export default function Keranjang() {
   return (
     <StoreLayout
       title="Keranjang"
-      noSearchable={true}
+      onlySearchable={true}
       main={
         <div className="py-3 flex flex-wrap w-full justify-evenly">
           <ProductCart />

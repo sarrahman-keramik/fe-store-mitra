@@ -90,6 +90,7 @@ function IconButton(props: {
   other?: any;
   disabled?: boolean;
   otherIcon?: any;
+  size?: "sm" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
 }) {
   return (
     <Button
@@ -102,7 +103,7 @@ function IconButton(props: {
           <Iconify
             color={props.color}
             icon={props.icon}
-            size="2xl"
+            size={props.size}
             other={`${
               props.loading || props.disabled
                 ? "cursor-not-allowed"
