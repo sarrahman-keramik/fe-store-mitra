@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import jwt_decode from "jwt-decode";
 import { useRouter } from "next/router";
+import { Confirm, Loading, Notify, Report } from "notiflix";
 import { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import { IconButton } from "../../src/components/atoms";
+import { LogoutApi } from "../../src/redux/actions";
 import { SectionLayout, StoreLayout } from "../../src/template";
 
-export default function Profile() {
+function Profile(props: { logout: () => Promise<any> }) {
   const router = useRouter();
   const [isLogin, setIsLogin] = useState(false);
   const [profile, setProfile] = useState({} as any);
@@ -21,6 +24,26 @@ export default function Profile() {
     };
     call();
   }, []);
+
+  const handleLogout = () => {
+    Loading.pulse({
+      svgColor: "#00695c",
+      backgroundColor: "rgba(0, 0, 100, 0.5)",
+    });
+    props
+      .logout()
+      .then((res) => {
+        Report.success("Kamu Telah Keluar", "", "Okay");
+        window.location.href = `${window.location.origin}/login`;
+      })
+      .catch((err) => {
+        if (err.response.data) {
+          Notify.failure(err.response.data.message, {
+            position: "right-bottom",
+          });
+        }
+      });
+  };
 
   return (
     <StoreLayout
@@ -117,33 +140,56 @@ export default function Profile() {
               </div>
             }
           />
-          <SectionLayout
-            title={"Lainnnya"}
-            main={
-              <div className="w-full">
-                <div className="flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
-                  <IconButton
-                    icon="bxs:help-circle"
-                    backgroundColor="transparent"
-                    color="teal"
-                  />
-                  <p>Pusat Bantuan</p>
-                </div>
+          <div className={`${isLogin ? "" : "hidden"}`}>
+            <SectionLayout
+              title={"Lainnnya"}
+              main={
+                <div className="w-full">
+                  <div className="flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
+                    <IconButton
+                      icon="bxs:help-circle"
+                      backgroundColor="transparent"
+                      color="teal"
+                    />
+                    <p>Pusat Bantuan</p>
+                  </div>
 
-                <div className="flex items-center cursor-pointer py-3 text-sm text-red-600 capitalize transition-colors duration-200 transform hover:bg-red-50">
-                  <IconButton
-                    icon="fluent:sign-out-20-filled"
-                    backgroundColor="transparent"
-                    color="red"
-                  />
-                  <p>Keluar</p>
+                  <div
+                    onClick={() => {
+                      Confirm.show(
+                        "Konfirmasi Keluar",
+                        "Apakah Kamu Yakin",
+                        "Ya",
+                        "Tidak",
+                        handleLogout,
+                        () => {},
+                        {
+                          okButtonBackground: "red",
+                        }
+                      );
+                    }}
+                    className="flex items-center cursor-pointer py-3 text-sm text-red-600 capitalize transition-colors duration-200 transform hover:bg-red-50"
+                  >
+                    <IconButton
+                      icon="fluent:sign-out-20-filled"
+                      backgroundColor="transparent"
+                      color="red"
+                    />
+                    <p>Keluar</p>
+                  </div>
                 </div>
-              </div>
-            }
-          />
-          <p className="text-center text-xs text-gray-600">App Version 1.0</p>
+              }
+            />
+          </div>
+          <p className="text-center text-xs text-gray-500">App Version 1.0</p>
         </div>
       }
     />
   );
 }
+
+const actions = (dispatch: any) => ({
+  logout: () => dispatch(LogoutApi()),
+});
+
+export default connect(null, actions)(Profile);

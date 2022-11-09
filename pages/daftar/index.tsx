@@ -66,7 +66,14 @@ function Daftar(props: { daftar: (data: any) => Promise<any> }) {
   return (
     <div>
       <div className="flex shadow justify-between bg-white p-3 items-center px-5">
-        <div>
+        <div className={"flex items-center"}>
+          <IconButton
+            other={`mr-2 `}
+            color="teal"
+            backgroundColor="transparent"
+            icon="eva:arrow-back-fill"
+            onClick={() => router.back()}
+          />
           <h2 className="font-bold text-lg md:text-2xl text-teal-800">
             {`${process.env.NEXT_PUBLIC_NAMEAPP}`}
           </h2>

@@ -8,7 +8,6 @@ export default function StoreLayout(props: {
   title: string;
   onlySearchable?: boolean;
 }) {
-  const router = useRouter();
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {

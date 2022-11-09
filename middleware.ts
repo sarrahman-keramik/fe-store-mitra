@@ -17,6 +17,12 @@ export async function middleware(request: NextRequest) {
         return NextResponse.next();
     }
 
+    if (pathname === "/chat") {
+        if (!tx) {
+            return NextResponse.redirect(`${origin}/404`);
+        }
+    }
+
     try {
         if (pathname === "/login" || pathname === "/daftar") {
             if (tx) {
