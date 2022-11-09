@@ -18,7 +18,7 @@ export async function middleware(request: NextRequest) {
     }
 
     try {
-        if (pathname === "/login") {
+        if (pathname === "/login" || pathname === "/daftar") {
             if (tx) {
                 return NextResponse.redirect(`${origin}/`);
             }

@@ -59,7 +59,7 @@ function Masuk(props: { login: (data: any) => Promise<any> }) {
       <div className="flex shadow justify-between bg-white p-3 items-center px-5">
         <div>
           <h2 className="font-bold text-lg md:text-2xl text-teal-800">
-            Sarrahman
+            {`${process.env.NEXT_PUBLIC_NAMEAPP}`}
           </h2>
         </div>
         <div>
@@ -97,7 +97,8 @@ function Masuk(props: { login: (data: any) => Promise<any> }) {
       <div className="flex flex-col-reverse md:flex-row items-center h-screen">
         <div className="flex-1 hidden md:flex md:flex-col">
           <h2 className="text-center font-bold text-lg text-teal-800">
-            Bangun Rumah impian Anda Bersama Kami
+            Bangun Rumah impian Anda Bersama{" "}
+            {`${process.env.NEXT_PUBLIC_NAMEAPP}`}
           </h2>
           <Lottie
             loop

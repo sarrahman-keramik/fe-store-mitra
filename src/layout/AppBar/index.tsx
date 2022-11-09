@@ -1,8 +1,22 @@
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { IconButton, Textfield, Typograhpy } from "../../components/atoms";
 
 export default function AppBar() {
   const router = useRouter();
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    const call = async () => {
+      const getToken = await fetch("/api/token").then((res) => res.json());
+      const access_token = getToken.accessToken;
+      if (access_token) {
+        setIsLogin(true);
+      }
+    };
+    call();
+  }, []);
+
   return (
     <div>
       <div></div>
@@ -22,7 +36,7 @@ export default function AppBar() {
           />
           <IconButton backgroundColor="teal" color="white" icon="fa:search" />
         </div>
-        {/* <div className="sm:flex hidden items-center">
+        <div className={`${isLogin ? "hidden md:flex items-center" : "hidden"}`}>
           <IconButton
             other={"mr-2"}
             backgroundColor="transparent"
@@ -41,8 +55,14 @@ export default function AppBar() {
             icon="ci:notification"
             onClick={() => router.push("/notifikasi")}
           />
-        </div> */}
-        <div className="sm:flex px-4 font-semibold text-white hidden items-center">
+        </div>
+        <div
+          className={`${
+            isLogin
+              ? "hidden"
+              : "hidden md:flex px-4 font-semibold text-white items-center"
+          }`}
+        >
           <p
             className="mr-2 cursor-pointer rounded p-1 hover:border"
             onClick={() => router.push("/login")}
