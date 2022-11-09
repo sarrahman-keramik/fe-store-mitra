@@ -8,7 +8,7 @@ export default function ProductDetailCard() {
         <img src={`https://placeimg.com/640/480/nature`} className="rounded-t-lg md:rounded-tr-none md:rounded-l-lg" alt="gambar" />
       </div>
       <div className="md:w-2/3 w-full p-3 md:px-12 flex-col flex justify-center">
-        <h1 className="font-semibold text-xl md:text-4xl capitalize">
+        <h1 className="font-semibold text-xl md:text-3xl capitalize">
           Keramik Paling baru
         </h1>
         <ul className="mt-4 md:text-xl md:mt-8">
@@ -18,27 +18,27 @@ export default function ProductDetailCard() {
               color="teal"
               other={"mr-2"}
             />{" "}
-            <span className="font-medium">Merk : </span> Milan
+            <span className="font-medium">Category : </span> Keramik
           </li>
-          <li className="flex items-center mb-3 md:mb-6">
+          {/* <li className="flex items-center mb-3 md:mb-6">
             <Iconify
               icon="fluent:select-all-on-20-filled"
               color="teal"
               other={"mr-2"}
             />{" "}
-            <span className="font-medium">Ukuran :</span> 40 X 40
-          </li>
+            <span className="font-medium">Tipe :</span> 40 X 40
+          </li> */}
           <li className="flex items-center mb-3 md:mb-6">
             <Iconify
               icon="fluent:select-all-on-20-filled"
               color="teal"
               other={"mr-2"}
             />
-            <span className="font-medium">tipe :</span> Glossy
+            <span className="font-medium">Stok :</span> 100 ++
           </li>
         </ul>
         <div>
-          <h1 className="font-semibold text-2xl md:text-4xl mt-2 mb-5">
+          <h1 className="font-semibold text-xl md:text-2xl mt-2 mb-5">
             Rp 80.000
           </h1>
           <div className="flex justify-between items-center">
@@ -47,6 +47,7 @@ export default function ProductDetailCard() {
                 other={"mr-3"}
                 backgroundColor="green"
                 icon="akar-icons:whatsapp-fill"
+                size="2xl"
               />
               <Button
                 other={"mr-3"}
