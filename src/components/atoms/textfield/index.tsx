@@ -27,7 +27,7 @@ function Textfield(props: {
     <div className={`${props.hidden ? "hidden" : ""} ${props.other}`}>
       <label
         className={`
-        text-base first-letter:uppercase font-semibold text-teal-900
+        md:text-base text-sm first-letter:uppercase font-semibold text-teal-900
         ${props.label ? "" : "hidden"} `}
       >
         {props.label}
@@ -60,7 +60,7 @@ function Textfield(props: {
           };
         }}
         className={`
-        rounded p-2 w-full border border-gray-700 focus:border-gray-900 hover:border-gray-400 bg-white
+        rounded p-1 md:p-2 w-full border border-gray-700 focus:border-gray-900 hover:border-gray-400 bg-white
         ${props.disabled ? "cursor-not-allowed bg-red-200" : ""}
         ${props.costumErrMessage ? "bg-red-200 border-red-700" : ""}
         ${isNull ? "bg-red-200 border-red-700" : ""}

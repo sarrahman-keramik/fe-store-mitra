@@ -14,6 +14,7 @@ export default function DetailBarang() {
     <StoreLayout
       title="Detail Barang"
       noSearchable={true}
+      onlySearchable={true}
       main={
         <div>
           <ProductDetailCard />

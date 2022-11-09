@@ -42,11 +42,11 @@ function Button(props: {
         ${bgColor === "orange" ? "bg-orange-500 hover:bg-orange-600" : ""}
         ${bgColor === "transparent" ? "bg-transparent" : ""}
         ${color === "black" ? "text-black" : "text-white"}
-        py-2 px-4 rounded-md md:rounded-lg transition hover:shadow-md
+        py-2 md:px-4 px-2 rounded md:rounded-md transition hover:shadow
         ${props.other}`}
     >
       <div
-        className={`font-semibold first-letter:uppercase text-base font-sans ${
+        className={`font-semibold first-letter:uppercase text-sm md:text-base font-sans ${
           props.icon ? "inline-flex items-center" : ""
         }`}
       >
@@ -102,6 +102,7 @@ function IconButton(props: {
           <Iconify
             color={props.color}
             icon={props.icon}
+            size="2xl"
             other={`${
               props.loading || props.disabled
                 ? "cursor-not-allowed"
