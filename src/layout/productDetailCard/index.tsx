@@ -20,14 +20,6 @@ export default function ProductDetailCard() {
             />{" "}
             <span className="font-medium">Category : </span> Keramik
           </li>
-          {/* <li className="flex items-center mb-3 md:mb-6">
-            <Iconify
-              icon="fluent:select-all-on-20-filled"
-              color="teal"
-              other={"mr-2"}
-            />{" "}
-            <span className="font-medium">Tipe :</span> 40 X 40
-          </li> */}
           <li className="flex items-center mb-3 md:mb-6">
             <Iconify
               icon="fluent:select-all-on-20-filled"

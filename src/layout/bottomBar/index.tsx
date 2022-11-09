@@ -9,7 +9,7 @@ export default function BottomBar(props: { isLogin: boolean }) {
         <div
           className={`text-center cursor-pointer ${
             router.pathname === "/" ? "bg-teal-100" : ""
-          } hover:bg-teal-100 rounded-lg p-2`}
+          } hover:bg-teal-100 flex-1 p-2`}
         >
           <IconButton
             backgroundColor="transparent"
@@ -23,13 +23,13 @@ export default function BottomBar(props: { isLogin: boolean }) {
             props.isLogin ? "block" : "hidden"
           } text-center cursor-pointer ${
             router.pathname === "/tersimpan" ? "bg-teal-100" : ""
-          } hover:bg-teal-100 p-2`}
+          } hover:bg-teal-100 flex-1 p-2`}
         >
           <IconButton
             backgroundColor="transparent"
-            icon="ci:heart-fill"
+            icon="bi:chat-text-fill"
             color="teal"
-            onClick={() => router.push("/tersimpan")}
+            onClick={() => router.push("/chat")}
           />
         </div>
         <div
@@ -37,7 +37,7 @@ export default function BottomBar(props: { isLogin: boolean }) {
             props.isLogin ? "block" : "hidden"
           } text-center cursor-pointer ${
             router.pathname === "/keranjang" ? "bg-teal-100" : ""
-          } hover:bg-teal-100 p-2`}
+          } hover:bg-teal-100 flex-1 p-2`}
         >
           <IconButton
             backgroundColor="transparent"
@@ -49,7 +49,7 @@ export default function BottomBar(props: { isLogin: boolean }) {
         <div
           className={`${
             router.pathname === "/profile" ? "bg-teal-100" : ""
-          } text-center cursor-pointer hover:bg-teal-100 rounded-lg p-2`}
+          } text-center cursor-pointer hover:bg-teal-100 flex-1 p-2`}
         >
           <IconButton
             backgroundColor="transparent"

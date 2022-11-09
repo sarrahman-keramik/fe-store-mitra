@@ -3,32 +3,36 @@ import { IconButton, Iconify } from "../../../atoms";
 /* eslint-disable @next/next/no-img-element */
 export default function ProductCart() {
   return (
-    <div className="bg-white rounded-lg md:rounded-2xl shadow-lg w-full md:w-[48%] m-2 flex">
-      <div className="w-1/3">
+    <div className="bg-white flex-col md:flex-row rounded-md md:rounded-xl shadow w-full md:w-[48%] m-2 flex">
+      <div className="md:w-1/3">
         <img
-          className="p-1 rounded-tl-md object-contain"
-          src={image2}
+          className="md:rounded-l-md rounded-t md:rounded-tr-none object-contain"
+          src={`https://placeimg.com/640/480/nature`}
           alt="product image"
         />{" "}
       </div>
       <div className="md:w-2/3 p-3 md:px-10 flex-col flex justify-center">
         <div className="flex items-center justify-between">
-          <h1 className="font-semibold md:text-2xl capitalize">
-            Keramik Paling baru 
+          <h1 className="font-bold md:text-xl capitalize">
+            Keramik Paling baru
           </h1>
-          <IconButton icon="fluent:select-all-on-20-filled" backgroundColor="transparent" color="red" />
+          <IconButton
+            icon="bi:trash-fill"
+            backgroundColor="transparent"
+            color="red"
+          />
         </div>
         <div className="flex items-center py-3">
-          <Iconify icon="fluent:select-all-on-20-filled" color="orange" />
+          <Iconify icon="akar-icons:circle-minus-fill" color="orange" />
           <input
             defaultValue={0}
             className="border w-10 mx-1 text-center"
             type="number"
           />
-          <Iconify icon="fluent:select-all-on-20-filled" color="teal" />
+          <Iconify icon="akar-icons:circle-plus-fill" color="teal" />
         </div>
         <div>
-          <h1 className="font-semibold md:text-2xl capitalize">Rp 1.200.000</h1>
+          <h1 className="font-semibold md:text-xl capitalize">Rp 1.200.000</h1>
         </div>
       </div>
     </div>

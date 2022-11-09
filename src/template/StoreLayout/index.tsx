@@ -29,16 +29,7 @@ export default function StoreLayout(props: {
       </Head>
       <AppBar isLogin={isLogin} onlySearchable={props.onlySearchable} />
       <div className="p-1 md:p-8 w-full mb-20 md:mb-5">{props.main}</div>
-      <div className={`${router.pathname === "/keranjang" ? "hidden" : ""}`}>
-        <BottomBar isLogin={isLogin} />
-      </div>
-      <div
-        className={`w-full cursor-pointer ${
-          router.pathname === "/keranjang" ? "fixed" : "hidden"
-        } bg-orange-500 text-white z-20 text-center py-2 font-bold text-lg bottom-0 hover:bg-orange-400`}
-      >
-        Pesan
-      </div>
+      <BottomBar isLogin={isLogin} />
     </div>
   );
 }

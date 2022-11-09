@@ -98,14 +98,21 @@ export default function Profile() {
                   />
                   <p>Pesanan Saya</p>
                 </div>
-
-                <div className="flex items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
+                <div className="flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
                   <IconButton
                     icon="ci:heart-fill"
                     backgroundColor="transparent"
                     color="teal"
                   />
                   <p>Favorit Saya</p>
+                </div>
+                <div className="flex items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
+                  <IconButton
+                    icon="wpf:faq"
+                    backgroundColor="transparent"
+                    color="teal"
+                  />
+                  <p>FAQ</p>
                 </div>
               </div>
             }
