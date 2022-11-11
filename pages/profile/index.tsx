@@ -82,11 +82,11 @@ function Profile(props: { logout: () => Promise<any> }) {
                       className={`${
                         isLogin
                           ? "hidden"
-                          : "flex px-4 font-semibold items-center"
+                          : "flex px-4 font-semibold items-center select-none"
                       }`}
                     >
                       <p
-                        className="mr-2 cursor-pointer rounded p-1 hover:border"
+                        className="mr-2 cursor-pointer rounded p-1 hover:shadow"
                         onClick={() => router.push("/login")}
                       >
                         Masuk
@@ -94,7 +94,7 @@ function Profile(props: { logout: () => Promise<any> }) {
                       <p>|</p>
                       <p
                         onClick={() => router.push("/daftar")}
-                        className="ml-2 cursor-pointer rounded p-1 hover:border"
+                        className="ml-2 cursor-pointer rounded p-1 hover:shadow"
                       >
                         Daftar
                       </p>
@@ -102,6 +102,7 @@ function Profile(props: { logout: () => Promise<any> }) {
                   </div>
                 </div>
                 <IconButton
+                  other={`${isLogin ? "" : "hidden"}`}
                   icon="el:edit"
                   backgroundColor="transparent"
                   color="teal"
@@ -113,7 +114,7 @@ function Profile(props: { logout: () => Promise<any> }) {
             title={"Halaman"}
             main={
               <div className="w-full">
-                <div className="flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
+                <div className="select-none flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
                   <IconButton
                     icon="icon-park-solid:transaction-order"
                     backgroundColor="transparent"
@@ -121,7 +122,7 @@ function Profile(props: { logout: () => Promise<any> }) {
                   />
                   <p>Pesanan Saya</p>
                 </div>
-                <div className="flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
+                <div className="select-none flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
                   <IconButton
                     icon="ci:heart-fill"
                     backgroundColor="transparent"
@@ -129,7 +130,7 @@ function Profile(props: { logout: () => Promise<any> }) {
                   />
                   <p>Favorit Saya</p>
                 </div>
-                <div className="flex items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
+                <div className="select-none flex items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
                   <IconButton
                     icon="wpf:faq"
                     backgroundColor="transparent"
@@ -145,7 +146,7 @@ function Profile(props: { logout: () => Promise<any> }) {
               title={"Lainnnya"}
               main={
                 <div className="w-full">
-                  <div className="flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
+                  <div className="select-none flex border-b items-center cursor-pointer py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-sky-50">
                     <IconButton
                       icon="bxs:help-circle"
                       backgroundColor="transparent"
@@ -168,7 +169,7 @@ function Profile(props: { logout: () => Promise<any> }) {
                         }
                       );
                     }}
-                    className="flex items-center cursor-pointer py-3 text-sm text-red-600 capitalize transition-colors duration-200 transform hover:bg-red-50"
+                    className="select-none flex items-center cursor-pointer py-3 text-sm text-red-600 capitalize transition-colors duration-200 transform hover:bg-red-50"
                   >
                     <IconButton
                       icon="fluent:sign-out-20-filled"

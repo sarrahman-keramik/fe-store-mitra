@@ -85,7 +85,7 @@ export default function Promo() {
           <Swiper
             slidesPerView={2}
             breakpoints={{
-              250: { slidesPerView: 1.9 },
+              250: { slidesPerView: 1.9  },
               640: { slidesPerView: 3.1 },
               768: { slidesPerView: 4.1 },
               1024: { slidesPerView: 6.3 },

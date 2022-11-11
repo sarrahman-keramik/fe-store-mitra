@@ -10,12 +10,12 @@ export default function BottomBar(props: { isLogin: boolean }) {
           className={`text-center cursor-pointer ${
             router.pathname === "/" ? "bg-teal-100" : ""
           } hover:bg-teal-100 flex-1 p-2`}
+          onClick={() => router.push("/")}
         >
           <IconButton
             backgroundColor="transparent"
             icon="ant-design:home-filled"
             color="teal"
-            onClick={() => router.push("/")}
           />
         </div>
         <div
@@ -24,12 +24,12 @@ export default function BottomBar(props: { isLogin: boolean }) {
           } text-center cursor-pointer ${
             router.pathname === "/tersimpan" ? "bg-teal-100" : ""
           } hover:bg-teal-100 flex-1 p-2`}
+          onClick={() => router.push("/chat")}
         >
           <IconButton
             backgroundColor="transparent"
             icon="bi:chat-text-fill"
             color="teal"
-            onClick={() => router.push("/chat")}
           />
         </div>
         <div
@@ -38,24 +38,24 @@ export default function BottomBar(props: { isLogin: boolean }) {
           } text-center cursor-pointer ${
             router.pathname === "/keranjang" ? "bg-teal-100" : ""
           } hover:bg-teal-100 flex-1 p-2`}
+          onClick={() => router.push("/keranjang")}
         >
           <IconButton
             backgroundColor="transparent"
             icon="bxs:cart"
             color="teal"
-            onClick={() => router.push("/keranjang")}
           />
         </div>
         <div
           className={`${
             router.pathname === "/profile" ? "bg-teal-100" : ""
           } text-center cursor-pointer hover:bg-teal-100 flex-1 p-2`}
+          onClick={() => router.push("/profile")}
         >
           <IconButton
             backgroundColor="transparent"
             color="teal"
             icon="ic:baseline-account-circle"
-            onClick={() => router.push("/profile")}
           />
         </div>
       </div>
